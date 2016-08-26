@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+<name replace-wildcards="yes">%h</name>
+  <service>
+    <type>_afpovertcp._tcp</type>
+    <port>548</port>
+  </service>
+  <service>
+    <type>_device-info._tcp</type>
+    <port>0</port>
+    <txt-record>model=VSDX-Time Capsule</txt-record>
+  </service>
+  <service>
+    <type>_adisk._tcp</type>
+    <port>9</port>
+    <txt-record>sys=waMA=XX:XX:XX:XX:XX:XX,adVF=0x100</txt-record>
+    <txt-record>dk1=adVF=0x83,adVN=__AFP_NAME__</txt-record>
+  </service>
+</service-group>
+
